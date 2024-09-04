@@ -1,0 +1,41 @@
+﻿db.students.updateMany({}, {$set: {interests: ["coding", "brunch", "MongoDB"]}})
+
+
+db.students.updateOne({name: "Spunk Davis"}, { $addToSet: { interests: "Magic Tricks" }}})
+db.students.updateOne({name: "Mary Hoette"}, { $addToSet: { interests: "Board Games" }})
+db.students.updateOne({name: "Hafsa Pennington"}, { $addToSet: { interests: "Knitting" }})
+db.students.updateOne({name: "Frederick Abbatelli"}, { $addToSet: { interests: "Soccer" }})
+db.students.updateOne({name: "Sara Berry"}, { $addToSet: { interests: "Singing" }})
+
+
+db.students.updateOne({name: "Spunk Davis"}, { $addToSet: { interests: "Taxes" }})
+
+
+db.students.updateOne({name: "Spunk Davis"}, {$pull: { interests: "Taxes" }})
+
+
+db.students.deleteMany({home_state: "California"})
+
+
+db.students.deleteMany({name: "Mary Hoette"})
+
+
+db.students.deleteMany({name: "Mary Hoette"})
+
+
+db.students.deleteOne({lucky_number: {$gt: 5}})
+
+
+db.students.updateMany({}, {$set: {number_of_belts: 0}})
+
+
+db.students.updateMany({home_state: "California"}, {$inc: {number_of_belts:1}})
+
+
+db.students.updateMany({}, {$rename: {number_of_belts: "belts_earned"}})
+
+
+db.students.updateMany({}, {$unset: {lucky_number: 1}})
+
+
+db.students.updateMany({}, {$set: {updated_on: new Date()}})

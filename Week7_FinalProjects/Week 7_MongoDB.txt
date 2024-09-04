@@ -1,0 +1,112 @@
+﻿mongosh
+
+
+use jessup_db
+
+
+db.createCollection("students")
+
+
+db.students.insertOne({name: "Mary Hoette", year_in_school: 3, major: "Computer Science", home_state: "Missouri"})
+db.students.insertOne({name: "Spunk Davis", year_in_school: 6, major: "Mathematics", home_state: "Wisconsin"})
+db.students.insertOne({name: "Nora Hennessy", year_in_school: 3, major: "Business", home_state: "New Mexico"})
+db.students.insertOne({name: "Gregory Thompson", year_in_school: 1, major: "Art", home_state: "California"})
+db.students.insertOne({name: "Lauren Hahn", year_in_school: 2, major: "Computer Science", home_state: "Oregon"})
+db.students.insertOne({name: "Lee Cook", year_in_school: 4, major: "Psychology", home_state: "Washington"})
+db.students.insertOne({name: "Jerome Underwood", year_in_school: 3, major: "Finance", home_state: "Missouri"})
+db.students.insertOne({name: "Marion Lee", year_in_school: 4, major: "History", home_state: "Illinois"})
+db.students.insertOne({name: "Mark Potts", year_in_school: 2, major: "Computer Science", home_state: "Pennsylvania"})
+db.students.insertOne({name: "Joyce Gillespe", year_in_school: 3, major: "Mathematics", home_state: "Virgina"})
+db.students.insertOne({name: "Christopher Gibson", year_in_school: 2, major: "Art", home_state: "California"})
+db.students.insertOne({name: "Ronnie Huang", year_in_school: 1, major: "English", home_state: "Illinois"})
+db.students.insertOne({name: "Gilburto Godson", year_in_school: 2, major: "Sports Management", home_state: "Georgia"})
+db.students.insertOne({name: "Joey Gibson", year_in_school: 1, major: "Business", home_state: "California"})
+db.students.insertOne({name: "Jordon Frazier", year_in_school: 3, major: "History", home_state: "Florida"})
+
+
+
+
+db.createCollection("faculty")
+
+
+db.faculty.insertOne({name: "Raphiel France", department: "Computer Science"})
+db.faculty.insertOne({name: "Edward Havord", department: "Admissions"})
+db.faculty.insertOne({name: "Wallace Quengle", department: "Advancement"})
+db.faculty.insertOne({name: "Dorthea Atkinson", department: "Finance"})
+db.faculty.insertOne({name: "Charity Luna", department: "Janitorial Services"})
+db.faculty.insertOne({name: "Olga Moran", department: "Art"})
+db.faculty.insertOne({name: "Anne Long", department: "English"})
+db.faculty.insertOne({name: "Tricia Juarez", department: "Mathematics"})
+db.faculty.insertOne({name: "Delmar Contrease", department: "History"})
+db.faculty.insertOne({name: "Jim Rich", department: "Music"})
+db.faculty.insertOne({name: "Hiram Potter", department: "Business"})
+db.faculty.insertOne({name: "Cecil Lutz", department: "HR"})
+db.faculty.insertOne({name: "Shauna Norris", department: "Psychology"})
+db.faculty.insertOne({name: "Otto Hammond", department: "Communications"})
+db.faculty.insertOne({name: "Long Randolph", department: "Sports Management"})
+
+
+
+
+db.createCollection("departments")
+
+
+db.departments.insertOne({name: "Computer Science", num_of_faculty: 4, num_of_students: 125})
+db.departments.insertOne({name: "Admissions", num_of_faculty: 7})
+db.departments.insertOne({name: "Advancement", num_of_faculty: 5})
+db.departments.insertOne({name: "Finance", num_of_faculty: 5, num_of_students: 203})
+db.departments.insertOne({name: "Janitorial Services", num_of_faculty: 3})
+db.departments.insertOne({name: "Art", num_of_faculty: 2, num_of_students: 89})
+db.departments.insertOne({name: "English", num_of_faculty: 4, num_of_students: 212})
+db.departments.insertOne({name: "Mathematics", num_of_faculty: 3, num_of_students: 240})
+db.departments.insertOne({name: "History", num_of_faculty: 4, num_of_students: 324})
+db.departments.insertOne({name: "Music", num_of_faculty: 3, num_of_students: 240})
+db.departments.insertOne({name: "Business", num_of_faculty: 5, num_of_students: 146})
+db.departments.insertOne({name: "HR", num_of_faculty: 2})
+db.departments.insertOne({name: "Psychology", num_of_faculty: 4, num_of_students: 209})
+db.departments.insertOne({name: "Communications", num_of_faculty: 3, num_of_students: 175})
+db.departments.insertOne({name: "Sports Management", num_of_faculty: 2, num_of_students: 136})
+
+
+
+
+db.createCollection("classes")
+
+
+db.classes.insertOne({name: "Intro to Programming", class_code: "CSC150", department: "Computer Science"})
+db.classes.insertOne({name: "Intermediate Finance", class_code: "FIN 245", department: "Finance"})
+db.classes.insertOne({name: "Watercolor 3", class_code: "ART 304", department: "Art"})
+db.classes.insertOne({name: "Watercolor 2", class_code: "ART 204", department: "Art"})
+db.classes.insertOne({name: "Databases", class_code: "CSC 380", department: "Computer Science"})
+db.classes.insertOne({name: "W: Composition", class_code: "ENG 115", department: "English"})
+db.classes.insertOne({name: "Differential Equations", class_code: "MAT 370", department: "Mathematics"})
+db.classes.insertOne({name: "American History", class_code: "HIS 137", department: "History"})
+db.classes.insertOne({name: "Jazz Band", class_code: "MUS 370", department: "Music"})
+db.classes.insertOne({name: "Business Law", class_code: "BUS 466", department: "Business"})
+db.classes.insertOne({name: "Gender and Human Sexuality", class_code: "PSY 386", department: "Psychology"})
+db.classes.insertOne({name: "Management of Recreation", class_code: "SPM 440", department: "Sports Management"})
+db.classes.insertOne({name: "British Literature", class_code: "ENG 211", department: "English"})
+db.classes.insertOne({name: "Web Programming", class_code: "CSC 390", department: "Computer Science"})
+db.classes.insertOne({name: "Pre-Calculus", class_code: "MAT 142", department: "Mathematics"})
+
+
+
+
+
+
+db.createCollection("semesters")
+
+
+db.semesters.insertOne({name: "Fall MBA", start_date: "8/21", end_date: "10/26"})
+db.semesters.insertOne({name: "Fall Full Session", start_date: "8/21", end_date: "12/7"})
+db.semesters.insertOne({name: "Fall A Session", start_date: "8/21", end_date: "10/4"})
+db.semesters.insertOne({name: "Fall B Session", start_date: "10/9", end_date: "12/7"})
+db.semesters.insertOne({name: "Winter MBA", start_date: "11/6", end_date: "2/16"})
+db.semesters.insertOne({name: "J-Term", start_date: "1/2", end_date: "1/19"})
+db.semesters.insertOne({name: "Spring Full Session", start_date: "1/22", end_date: "5/12"})
+db.semesters.insertOne({name: "Spring A Session", start_date: "1/22", end_date: "3/8"})
+db.semesters.insertOne({name: "Spring MBA", start_date: "2/26", end_date: "5/12"})
+db.semesters.insertOne({name: "Spring B Session", start_date: "3/18", end_date: "5/12"})
+db.semesters.insertOne({name: "Summer A Session", start_date: "6/3", end_date: "6/28"})
+db.semesters.insertOne({name: "Summer B Session", start_date: "7/1", end_date: "7/26"})
+db.semesters.insertOne({name: "Summer C Session", start_date: "6/3", end_date: "7/26"})

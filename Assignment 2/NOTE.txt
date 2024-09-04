@@ -1,0 +1,1 @@
+Hello! The database we made in assignment 1 has first and last name in the same row, so I just put the whole name when it asked for either first or last name.
